@@ -3,3 +3,20 @@
 // Array para armazenar a lista de amigos
 let amigos = [];
 
+// Função para inserir amigo
+function adicionarAmigo() {
+    let inputAmigo = document.getElementById('amigo'); 
+    let nomeAmigo = inputAmigo.value;
+    let listaAmigos = document.getElementById('listaAmigos');
+
+    // Validações
+    if (nomeAmigo === '') {
+        alert('Este nome não é válido, digite outro nome!');
+        return
+    } else {
+        amigos.push(nomeAmigo);
+    }
+    console.log("Lista inicial:", amigos);
+
+    inputAmigo.value = '';
+}
