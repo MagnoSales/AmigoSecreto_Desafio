@@ -48,7 +48,7 @@ function atualizarLista() {
 
 // Função para sortear amigo - função que está no HTML - linha 29
 function sortearAmigo() {
-    // Validar que há amigos disponíveis
+    // Validar se há amigos disponíveis
     if (amigos.length === 0) {
         alert('Não há amigos para sortear. Adicione alguns nomes primeiro.');
         return;
