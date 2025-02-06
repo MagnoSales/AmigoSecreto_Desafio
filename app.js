@@ -46,3 +46,24 @@ function atualizarLista() {
     console.log("Lista visual atualizada. Total de itens:", amigos.length);
 }
 
+// Função para sortear amigo - função que está no HTML - linha 29
+function sortearAmigo() {
+    // Validar que há amigos disponíveis
+    if (amigos.length === 0) {
+        alert('Não há amigos para sortear. Adicione alguns nomes primeiro.');
+        return;
+    }
+
+    // Gerar um índice aleatório
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+    // Obter o nome sorteado
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    // Mostrar o resultado
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = `O amigo sorteado foi: ${amigoSorteado}`;
+
+    console.log("Índice sorteado:", indiceAleatorio); // Log do índice
+    console.log("Amigo sorteado:", amigoSorteado);    // Log do amigo sorteado
+}
